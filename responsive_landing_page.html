@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 30px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .navbar.scrolled {
+      background: #007bff;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.1rem;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 30px;
+    }
+
+    .section-light {
+      background: #f5f5f5;
+    }
+
+    .section-dark {
+      background: #333;
+      color: #fff;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.4rem;
+      text-align: justify;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .navbar a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">MySite</div>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome to MySite</h1>
+      <p>
+        Discover a world of possibilities. We bring you the best services, products, and experiences. 
+        Explore our website to find solutions tailored just for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-light">
+    <h2>About Us</h2>
+    <p>
+      At MySite, we pride ourselves on delivering excellence. Established with the goal of transforming the digital landscape, 
+      we focus on providing innovative solutions to modern problems. Our team of dedicated professionals is committed to 
+      ensuring client satisfaction by offering personalized and cutting-edge services. From web design to digital marketing, 
+      we have a proven track record of success.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-dark">
+    <h2>Our Services</h2>
+    <p>
+      We offer a comprehensive range of services designed to meet your unique needs. Whether you're looking for web development, 
+      e-commerce solutions, or branding services, we have the expertise to deliver outstanding results. 
+      Our services include:
+      <br><br>
+      - Web Development: Modern, responsive websites.<br>
+      - Digital Marketing: Strategies to grow your business.<br>
+      - E-commerce: Build your online store effortlessly.<br>
+      - Branding: Create a memorable identity for your brand.<br>
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-light">
+    <h2>Contact Us</h2>
+    <p>
+      We'd love to hear from you! Reach out to us for inquiries, collaborations, or just to say hello. 
+      Our team is always here to help you achieve your goals.
+      <br><br>
+      Email: contact@mysite.com<br>
+      Phone: +1 123 456 7890<br>
+      Address: 123 Main Street, Cityville, Country.
+    </p>
+  </section>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    // Change navbar style on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
