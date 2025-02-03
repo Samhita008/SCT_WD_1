@@ -13,10 +13,4 @@ HTML5: Semantic structure.
 CSS3: Styling and responsiveness.
 JavaScript: Interactive scrolling effects.
 
-Usage
-Clone the repository:
-git clone https://github.com/your-username/responsive-landing-page.git
-Open index.html in any browser.
 
-License
-This project is licensed under the MIT License.
